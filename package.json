@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-linux": "pkg --targets node12-linux-x64 index.js --config package.json --output influx-opcua-server-linux",
-    "build-alpine": "pkg --targets node12-alpine-x64 index.js --config package.json --output influx-opcua-server-alpine"
+    "build-linux": "pkg --targets node16-linux-x64 index.js --config package.json --output influx-opcua-server-linux",
+    "build-alpine": "pkg --targets node16-alpine-x64 index.js --config package.json --output influx-opcua-server-alpine"
   },
   "repository": {
     "type": "git",
@@ -24,20 +24,20 @@
   "homepage": "https://github.com/factrylabs/influx-opcua-server#readme",
   "pkg": {
     "assets": [
-      "node_modules/node-opcua-server/certificates/*", 
+      "node_modules/node-opcua-server/certificates/*",
       "node_modules/node-opcua-server-discovery/certificates/*",
       "node_modules/node-opcua-client/certificates/*",
       "node_modules/node-opcua-server/certificates/PKI/**/**/*"
     ]
   },
   "devDependencies": {
-    "pkg": "^4.4.0",
-    "standard": "^14.3.1"
+    "pkg": "^5.6.0",
+    "standard": "^14.3.4"
   },
   "dependencies": {
-    "ajv": "^6.10.2",
+    "ajv": "^6.12.6",
     "bluebird": "^3.7.2",
-    "influx": "^5.5.1",
+    "influx": "^5.9.3",
     "node-opcua": "^0.7.4"
   }
 }
